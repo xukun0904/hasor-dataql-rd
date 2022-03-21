@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.hasor</groupId>
+        <artifactId>hasor-parent</artifactId>
+        <version>4.2.5</version>
+    </parent>
+    <groupId>com.jhr</groupId>
+    <artifactId>hasor-dataql-rd</artifactId>
+    <version>4.2.5</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <antlr4.visitor>true</antlr4.visitor>
+    </properties>
+
+    <!-- 引用依赖 -->
+    <dependencies>
+        <!-- basic -->
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-dataql-fx</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jhr</groupId>
+            <artifactId>datasource-operation-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>maven-public</name>
+            <url>http://3.7.191.1:10081//repository/maven-jhr/</url>
+        </repository>
+    </distributionManagement>
+</project>

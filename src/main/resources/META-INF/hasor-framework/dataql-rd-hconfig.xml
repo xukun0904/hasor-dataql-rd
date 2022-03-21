@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.hasor.net/sechma/dataql-rd">
+    <hasor>
+        <!-- 包扫描覆盖范围，逗号间隔 -->
+        <loadPackages>net.hasor.dataql.rd.*</loadPackages>
+
+        <!-- 内置 Fragment -->
+        <dataqlFx>
+            <bindFragmentSet>
+                <!-- @@rsql -->
+                <bindFragment name="rsql">net.hasor.dataql.rd.db.runsql.RpcSqlFragment</bindFragment>
+                <!-- 2020-05-18 新增@@rmybatis -->
+                <bindFragment name="rmybatis">net.hasor.dataql.rd.db.likemybatis.RpcMybatisFragment</bindFragment>
+            </bindFragmentSet>
+        </dataqlFx>
+
+        <autoLoadSpi>
+            <spi>net.hasor.dataql.rd.db.RpcLookupDataSourceListener</spi>
+        </autoLoadSpi>
+    </hasor>
+</config>
